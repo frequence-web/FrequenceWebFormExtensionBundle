@@ -1,0 +1,7 @@
+{% block fw_jquery_date_widget %}
+    {{ block('field_widget') }}
+    <script type="text/javascript">
+        if (undefined === window.fw_form_date) { window.fw_form_date = {} }
+        window.fw_form_date["{{ id }}"] = {{ jquery_options | json_encode | raw }};
+    </script>
+{% endblock %}
